@@ -18,16 +18,15 @@ function tuto_customizer_register_settings( $wp_customize ) {
 	);
 
 	// Asociamos un control de selección de color al parámetro anterior
-	// y lo añadimos a la seccion 'colors' ya presente en una instalación
+	// y lo añadimos a la seccion 'colors' ya presente por defecto en
 	// WordPress
 	$wp_customize->add_control(
 		new WP_Customize_Color_Control(
 			$wp_customize,
-			'link_color',
+			'tuto_custom_header_h1_color',
 			array(
 			    'label'      => 'Color de la cabecera',
 			    'section'    => 'colors',
-			    'settings'   => 'tuto_custom_header_h1_color'
 			)
 		)
 	);
@@ -46,8 +45,7 @@ function tuto_customizer_css() {
 	<style type="text/css">
 		
 		.header h1 {
-			// Color para la cabecera
-			color: <?php echo get_theme_mod( 'tuto_custom_header_h1_color' ); ?>
+			color: <?php echo get_theme_mod( 'tuto_custom_header_h1_color' ); ?>;
 		}
 		
 	</style>
