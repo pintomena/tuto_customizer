@@ -31,6 +31,40 @@ function tuto_customizer_register_settings( $wp_customize ) {
 		)
 	);
 
+	// Añadimos una nueva sección "Fuentes"
+	$wp_customize->add_section(
+		'tuto_custom_fonts',
+		array(
+			'title'     => 'Fuentes',
+			'priority'  => 200
+		)
+	);
+
+
+	// Creamos un nuevo parámetro para cambiar la fuente de las cabeceras
+	$wp_customize->add_setting(
+		'tuto_custom_header_h1_font',
+		array(
+			'default'   => 'times',
+		)
+	);
+
+	// Asociamos al parámetro anterior un control de selección con varias
+	// fuentes y lo añadimos a la seccion "Fuentes"
+	$wp_customize->add_control(
+		'tuto_custom_header_h1_font',
+		array(
+			'label'    => 'Fuente Cabecera',
+			'section'  => 'tuto_custom_fonts',
+			'type'     => 'select',
+			'choices'  => array(
+				'times'     => 'Times New Roman',
+				'arial'     => 'Arial',
+				'courier'   => 'Courier New'
+			)
+		)
+	);
+
 }
 add_action( 'customize_register', 'tuto_customizer_register_settings' );
 
@@ -43,11 +77,12 @@ add_action( 'customize_register', 'tuto_customizer_register_settings' );
 function tuto_customizer_css() {
 ?>
 	<style type="text/css">
-		
+
 		.header h1 {
 			color: <?php echo get_theme_mod( 'tuto_custom_header_h1_color' ); ?>;
+			font-family: <?php echo get_theme_mod( 'tuto_custom_header_h1_font' ); ?>;
 		}
-		
+
 	</style>
 <?php
 }
