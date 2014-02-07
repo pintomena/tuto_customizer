@@ -14,6 +14,7 @@ function tuto_customizer_register_settings( $wp_customize ) {
 		'tuto_custom_header_h1_color',
 		array(
 			'default'     => '#000000',
+			'transport'   => 'postMessage'
 		)
 	);
 
@@ -46,6 +47,7 @@ function tuto_customizer_register_settings( $wp_customize ) {
 		'tuto_custom_header_h1_font',
 		array(
 			'default'   => 'times',
+			'transport'   => 'postMessage'
 		)
 	);
 
@@ -87,3 +89,21 @@ function tuto_customizer_css() {
 <?php
 }
 add_action( 'wp_head', 'tuto_customizer_css' );
+
+/**
+ * Registramos nuestro script para Theme Customizer
+ *
+ * @since 	0.4.0
+ */
+function tuto_customizer_live_preview() {
+
+	wp_enqueue_script(
+		'tuto_customizer_live_preview',
+		get_template_directory_uri() . '/theme-customizer.js',
+		array( 'jquery', 'customize-preview' ),
+		'1.0.0',
+		true
+	);
+
+}
+add_action( 'customize_preview_init', 'tuto_customizer_live_preview' );
