@@ -4,7 +4,7 @@ Tutorial Customizer es una plantilla WordPress usada como base para el tutorial 
 
 Esta plantilla hace un uso muy básico de la API de customización de WordPress. [Theme Customizer](https://codex.wordpress.org/Theme_Customization_API).
 
-Esta plantilla no está en desarrollo sólo sirve como desmostración adjunta del tutorial http://bitado.com/theme-customiz…de-wordpress-i/
+Esta plantilla no está en desarrollo sólo sirve como desmostración adjunta del tutorial http://bitado.com/theme-customization-de-wordpress-i/
 
 ## Changelog
 
