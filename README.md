@@ -1,16 +1,16 @@
 # Tutorial Customizer
 
-Tutorial Customizer es una plantilla usada como base para el tutorial "Customizer con WordPress" del blog http://bitado.com/blog/
+Tutorial Customizer es una plantilla WordPress usada como base para el tutorial "Theme Customization de WordPress I" del blog http://bitado.com/blog/
 
 Esta plantilla hace un uso muy básico de la API de customización de WordPress. [Theme Customizer](https://codex.wordpress.org/Theme_Customization_API).
 
-Esta plantilla no está en desarrollo sólo sirve como desmostración adjunta del tutorial http://bitado.com/blog/TODO
+Esta plantilla no está en desarrollo sólo sirve como desmostración adjunta del tutorial http://bitado.com/theme-customiz…de-wordpress-i/
 
 ## Changelog
 
 _0.4.0 (07 febrero 2014)_
 
-* Añadimos script para Theme Customizer y cambiamos nuestros prametros al protocolo PostMessage
+* Añadimos script para Theme Customizer y cambiamos nuestros parametros al protocolo PostMessage
 
 _0.3.0 (07 febrero 2014)_
 
